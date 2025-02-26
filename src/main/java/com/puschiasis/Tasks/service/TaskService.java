@@ -15,4 +15,5 @@ public interface TaskService {
     Task updateTask(Long id, Task task);
 
     void deleteTask(Long id);
+    List<Task> getTasksByAssignedUser(String assignedUser);
 }

@@ -44,4 +44,10 @@ public class TaskServiceImpl implements TaskService {
         taskRepository.deleteById(id);
     }
 
+
+    @Override
+    public List<Task> getTasksByAssignedUser(String assignedUser) {
+        return taskRepository.findByAssignedUser(assignedUser);
+    }
+
 }
