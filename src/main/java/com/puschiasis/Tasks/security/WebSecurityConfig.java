@@ -25,10 +25,15 @@ public class WebSecurityConfig {
                 .csrf().disable()
                 .oauth2ResourceServer().jwt().jwtAuthenticationConverter(keyCloakJwtAuthenticationConverter).and().and()
                 .authorizeHttpRequests(authz -> authz
-//                       .requestMatchers(new AntPathRequestMatcher("/users/**")).hasAnyAuthority( "ROLE_administrador")
+                        .requestMatchers(
+                                "/swagger-ui/**",
+                                "/v3/api-docs/**",
+                                "/swagger-ui.html"
+                        ).permitAll()
                         .anyRequest().authenticated()
                 );
         return http.build();
     }
+
 
 }
