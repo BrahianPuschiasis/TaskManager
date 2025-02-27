@@ -1,0 +1,14 @@
+version: '3'
+services:
+  spring-app:
+    image: task-back:latest
+    env_file:
+      - .env
+    ports:
+      - "5167:5167"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge

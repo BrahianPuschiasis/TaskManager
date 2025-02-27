@@ -1,0 +1,19 @@
+# Ignorar el directorio de salida de Maven
+target/
+
+# Ignorar archivos de configuración de IntelliJ
+.idea/
+*.iml
+
+# Ignorar archivos y directorios de control de versiones
+.git/
+.gitignore
+
+# Ignorar archivos de registro
+*.log
+
+# Ignorar otros archivos y directorios temporales o innecesarios
+*.tmp
+*.swp
+*.bak
+*~
